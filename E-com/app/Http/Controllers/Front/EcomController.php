@@ -11,4 +11,12 @@ class EcomController extends Controller
     {
         return view('front.home.home');
     }
+    public function categoryPage()
+    {
+        return view('front.category.category');
+    }
+    public function productDetails()
+    {
+        return view('front.product.product-details');
+    }
 }

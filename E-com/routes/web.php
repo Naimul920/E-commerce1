@@ -15,3 +15,5 @@ use App\Http\Controllers\Front\EcomController;
 */
 
 Route::get('/', [EcomController::class, 'index'])->name('home');
+Route::get('/category-page', [EcomController::class, 'categoryPage'])->name('category.page');
+Route::get('/product-details', [EcomController::class, 'productDetails'])->name('product.details');
