@@ -11,4 +11,9 @@ class CategoryController extends Controller
     {
         return view('admin.category.add');
     }
+    public function create(Request $request)
+    {
+
+        return $request->all();
+    }
 }
