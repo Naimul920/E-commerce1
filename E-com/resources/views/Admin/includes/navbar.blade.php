@@ -20,7 +20,7 @@
                     <span class="nav-label">Category</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="">Store</a>
+                            <a href="{{route('add.category')}}">Store</a>
                         </li>
                         <li>
                             <a href="">Manage</a>
