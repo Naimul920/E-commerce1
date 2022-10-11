@@ -160,6 +160,14 @@
 <!-- END PAGA BACKDROPS-->
 @include('admin.includes.footer')
 
+@if(Session::has('message'))
+    <script>
+        $(document).ready(function () {
+            toastr.success('{{Session::get('message')}}')
+        })
+    </script>
+    @endif
+
 {{--@if(Session::has('message'))--}}
 {{--    <script>--}}
 {{--        $(document).ready(function () {--}}

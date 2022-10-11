@@ -23,7 +23,7 @@
                             <a href="{{route('add.category')}}">Store</a>
                         </li>
                         <li>
-                            <a href="">Manage</a>
+                            <a href="{{route('manage.category')}}">Manage</a>
                         </li>
 
                     </ul>
@@ -33,7 +33,7 @@
                     <span class="nav-label">Sub Category</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="colors.html">Colors</a>
+                            <a href="{{route('test')}}">Colors</a>
                         </li>
                         <li>
                             <a href="typography.html">Typography</a>
