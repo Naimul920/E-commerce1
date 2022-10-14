@@ -51,7 +51,7 @@ class Category extends Model
         self::$category->status=$request->status;
         self::$category->save();
     }
-    public function deleteCategory($id)
+    public static function deleteCategory($id)
     {
         self::$category=Category::find($id);
         if (file_exists(self::$category->image))

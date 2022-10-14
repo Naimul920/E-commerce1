@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\EcomController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SubCategoryController;
 
 
 /*
@@ -23,12 +24,19 @@ Route::get('/product-details', [EcomController::class, 'productDetails'])->name(
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
-
+    //category
     Route::get('/add-category', [CategoryController::class, 'index'])->name('add.category');
     Route::post('/new-category', [CategoryController::class, 'create'])->name('category.new');
     Route::get('/manage-category', [CategoryController::class, 'manage'])->name('manage.category');
     Route::get('/edit-category{id}', [CategoryController::class, 'edit'])->name('category.edit');
     Route::post('/update-category{id}', [CategoryController::class, 'update'])->name('category.update');
     Route::get('/delete-category{id}', [CategoryController::class, 'delete'])->name('category.delete');
+    //sub category
+    Route::get('/add-sub-category', [SubCategoryController::class, 'index'])->name('add.sub-category');
+    Route::post('/new-sub-category', [SubCategoryController::class, 'create'])->name('new.sub-category');
+    Route::get('/manage-sub-category', [SubCategoryController::class, 'manage'])->name('manage.sub-category');
+    Route::get('/edit-sub-category{id}', [SubCategoryController::class, 'edit'])->name('edit.sub-category');
+    Route::post('/update-sub-category{id}', [SubCategoryController::class, 'update'])->name('update.sub-category');
+    Route::get('/delete-sub-category{id}', [SubCategoryController::class, 'delete'])->name('delete.sub-category');
 
 });
