@@ -59,7 +59,7 @@
                     <span class="nav-label">Unit</span><i class="fa fa-angle-left arrow"></i></a>
                     <ul class="nav-2-level collapse">
                         <li>
-                            <a href="colors.html">Colors</a>
+                            <a href="{{route('test.popup')}}">Test popup</a>
                         </li>
                         <li>
                             <a href="typography.html">Typography</a>

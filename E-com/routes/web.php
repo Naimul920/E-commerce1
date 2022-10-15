@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\EcomController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\Test\PopUpController;
 
 
 /*
@@ -38,5 +39,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/edit-sub-category{id}', [SubCategoryController::class, 'edit'])->name('edit.sub-category');
     Route::post('/update-sub-category{id}', [SubCategoryController::class, 'update'])->name('update.sub-category');
     Route::get('/delete-sub-category{id}', [SubCategoryController::class, 'delete'])->name('delete.sub-category');
+
+    Route::get('/add-popup', [PopUpController::class, 'index'])->name('test.popup');
+    Route::post('/new-product', [PopUpController::class, 'create'])->name('product.new');
 
 });
